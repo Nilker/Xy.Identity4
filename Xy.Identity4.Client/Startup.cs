@@ -36,7 +36,7 @@ namespace Xy.Identity4.Client
                 {
                     options.SignInScheme = "Cookies";
 
-                    options.Authority = "http://localhost:5000";
+                    options.Authority = "http://localhost:6000";
                     options.RequireHttpsMetadata = false;
 
                     options.ClientId = "mvc";
