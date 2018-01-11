@@ -1,8 +1,6 @@
-@using Microsoft.AspNetCore.Identity
-@using Xy.Core.Server.Models
-
-@inject SignInManager<ApplicationUser> SignInManager
-@inject UserManager<ApplicationUser> UserManager
+@using Xy.Core.Server.CustomProvider
+@inject SignInManager<MyApplicationUser> SignInManager
+@inject UserManager<MyApplicationUser> UserManager
 
 @if (SignInManager.IsSignedIn(User))
 {
@@ -20,7 +18,11 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
-        <li><a asp-area="" asp-controller="Account" asp-action="Login">Log in</a></li>
+        <li>
+            <a asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Account" asp-action="Login">Log in</a>
+        </li>
     </ul>
 }

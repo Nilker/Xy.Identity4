@@ -30,7 +30,7 @@ namespace Api
             services.AddAuthentication("Bearer")
                 .AddIdentityServerAuthentication(s =>
                 {
-                    s.Authority = "http://localhost:5000";
+                    s.Authority = "http://localhost:6000";
                     s.RequireHttpsMetadata = false;
 
                     s.ApiName = "api1";
